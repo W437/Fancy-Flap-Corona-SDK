@@ -1,0 +1,78 @@
+settings =
+{
+    plugins =
+    {
+        ["CoronaProvider.ads.admob"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+
+        ["CoronaProvider.ads.vungle"] =
+        {
+            publisherId = "com.vungle",
+        },
+        
+        ["facebook"] =
+        {
+            publisherId = "com.coronalabs",
+            supportedPlatforms = { iphone=true, ["iphone-sim"]=true },
+        },
+  
+    },
+
+	orientation =
+ 	{
+		default = "portrait", 
+		supported = 
+ 		{
+			"portrait",
+		}
+	},
+
+	iphone =
+	{
+		plist =
+		{
+			UIApplicationExitsOnSuspend = false,
+            FacebookAppID = "501790179948842", 
+
+            CFBundleURLTypes = {
+                {
+                CFBundleURLSchemes = { "fb501790179948842", } 
+                }
+            },
+            UIStatusBarHidden = true,
+			UIAppFonts =                         
+			{
+				"AdvoCut.ttf"
+			},
+			CFBundleIconFile = "Icon.png",
+            CFBundleIconFiles = {
+                "Icon.png",
+                "Icon@2x.png",
+                "Icon-72.png",
+                "Icon-72@2x.png",
+                "Icon-76.png",
+                "Icon-76@2x.png",
+                "Icon-Small-50@2x.png",
+                "Icon-Small-50.png",
+                "Icon-Small@2x.png",
+                "Icon-Small.png",
+                "Icon-60@2x.png",
+                "Icon-60.png",
+            }
+		}
+	},
+
+    android =
+    {
+        usesPermissions =
+        {
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.READ_PHONE_STATE"
+        }
+    }
+}
+
+
